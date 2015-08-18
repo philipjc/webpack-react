@@ -10,7 +10,7 @@ var TARGET = process.env.npm_lifecycle_event;
 var ROOT_PATH = path.resolve(__dirname);
 
 var common = {
-  entry: path.resolve(ROOT_PATH, 'app/main'),
+  entry: path.resolve(ROOT_PATH, 'app/main.jsx'),
   output: {
     path: path.resolve(ROOT_PATH, 'build'),
     filename: 'bundle.js'
@@ -26,17 +26,7 @@ var common = {
     ]
   },
 
-  devServer: {
-    port: 4000,
-    colors: true,
-    historyApiFallback: true,
-    hot: true,
-    inline: true,
-    progress: true
-  },
-
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlwebpackPlugin({
       title: 'Kanban app'
     })
@@ -46,7 +36,17 @@ var common = {
 if(TARGET === 'start' || !TARGET) {
   module.exports = merge(common, {
     devtool: 'eval-source-map',
+    module: {
+      loaders: [
+        {
+          test: /\.jsx?$/,
+          loaders: ['babel'],
+          include: path.resolve(ROOT_PATH, 'app')
+        }
+      ]
+    },
     devServer: {
+      port: 4000,
       colors: true,
       historyApiFallback: true,
       hot: true,
