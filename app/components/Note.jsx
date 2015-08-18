@@ -4,7 +4,7 @@ export default class Note extends React.Component {
   render() {
     return (
       <div>
-        Learn Me Some Webpack
+        Learn Me Some Webpacks
       </div>
     )
   }
