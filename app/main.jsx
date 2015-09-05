@@ -1,4 +1,4 @@
-import './main.css';
+import './styles/_main.scss';
 
 import React from 'react';
 import App from './components/App.jsx';

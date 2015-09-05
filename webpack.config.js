@@ -19,8 +19,8 @@ var common = {
   module: {
     loaders: [
       {
-        test: /\.css$/,
-        loaders: ['style', 'css'],
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass'],
         include: path.resolve(ROOT_PATH, 'app')
       }
     ]
@@ -28,7 +28,7 @@ var common = {
 
   plugins: [
     new HtmlwebpackPlugin({
-      title: 'Kanban app'
+      title: 'App'
     })
   ]
 };

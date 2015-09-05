@@ -15,7 +15,9 @@
     "css-loader": "^0.16.0",
     "html-webpack-plugin": "^1.6.1",
     "node-libs-browser": "^0.5.2",
+    "node-sass": "^3.3.2",
     "react-hot-loader": "^1.2.8",
+    "sass-loader": "^2.0.1",
     "style-loader": "^0.12.3",
     "webpack": "^1.11.0",
     "webpack-merge": "^0.1.3"
