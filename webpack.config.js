@@ -40,7 +40,10 @@ if(TARGET === 'start' || !TARGET) {
       loaders: [
         {
           test: /\.jsx?$/,
-          loaders: ['react-hot', 'babel'],
+          loader: 'babel',
+          query: {
+            presets: ['react', 'es2015']
+          },
           include: path.resolve(ROOT_PATH, 'app')
         }
       ]

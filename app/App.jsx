@@ -1,6 +1,7 @@
 import './styles/_app.scss';
 
 import React from 'react';
+// import ReactDOM from 'react-dom';
 import Main from './components/Main.jsx';
 
 main();
