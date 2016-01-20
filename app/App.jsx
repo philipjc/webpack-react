@@ -1,7 +1,8 @@
 import './styles/_app.scss';
 
 import React from 'react';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
+
 import Main from './components/Main.jsx';
 
 main();
@@ -11,5 +12,5 @@ function main() {
 
   document.body.appendChild(app);
 
-  React.render(<Main />, app);
+  ReactDOM.render(<Main />, app);
 }
