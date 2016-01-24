@@ -9,8 +9,6 @@ export default class Main extends React.Component {
     this.state = MainStore.getState();
   }
 
-  
-
   render() {
     return (
       <Header title={ this.state.title } />
